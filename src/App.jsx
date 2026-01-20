@@ -13,7 +13,7 @@ function App(){
     <title>Caffeine cove</title>
     <Header/>
     <Home />
-    <br /><br /><br />
+    
    <About />
    
    <Menu />

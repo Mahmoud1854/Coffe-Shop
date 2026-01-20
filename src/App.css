@@ -118,6 +118,7 @@ ul{
 }
 #about{
   height: auto;
+  padding: 12px;
 }
 .AboutCon h1 span{
   color: var(--light-brown);
@@ -171,11 +172,11 @@ ul{
 .TestimCon{
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 80px;
 }
 .TestimChild{
   background-color: var(--background);
-  max-width: 300px;
+  max-width: 350px;
   height:auto;
   border-radius: 16px;
    padding-left: 10px;
