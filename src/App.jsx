@@ -10,7 +10,7 @@ import MainContentFooter from './footer';
 function App(){
   return (
     <>
-    <title>Caffeine cove</title>
+    
     <Header/>
     <Home />
     

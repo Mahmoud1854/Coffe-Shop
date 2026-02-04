@@ -12,6 +12,7 @@
   --dark-gary:#333;
   --light-brown:#c7a17a;
   --black:#1f2226;
+  
 }
 body{
     font-family: "Open Sans", sans-serif;
@@ -56,6 +57,29 @@ ul{
   gap: 30px;
   margin-top: 15px;
   margin-right: 80px;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding-right: 20px;
+  z-index: 1000;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--dark-gary);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 #Home{
       
@@ -233,8 +257,11 @@ Form{
   padding: 20px;
 }
 input{
-  max-width: 100%;
-  height: 6%;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 input:focus{
   border:1px solid var(--light-brown);
@@ -260,6 +287,11 @@ form button:hover{
 }
 input::placeholder{
   padding-left: 5px;
+}
+.formChild{
+  width: 550px;
+  max-width: 100%;
+  height: 100%;
 }
 /* contact end */
 /* footer start */
@@ -324,4 +356,161 @@ input::placeholder{
   align-items: center;
 }
 /* footer endd */
-/*  */
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .logo {
+    padding-left: 20px;
+  }
+  
+  ul {
+    margin-right: 0;
+    gap: 0;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  ul.active {
+    top: 70px; /* Adjust based on header height */
+  }
+
+  .hamburger {
+    display: block;
+  }
+  
+  nav {
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .homeContent {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  
+  .homeTextH1, .textAboutH1 {
+    padding-right: 0;
+  }
+  .formChild button{
+    width:80%;
+    margin-left: 10%;
+  }
+  .bottomFooter p{
+    font-size: 15px;
+  }
+  .homeText button {
+    margin: 15px auto;
+    display: block;
+  }
+
+  .homeImg {
+    margin: 0 auto;
+  }
+  
+  .AboutCon {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .aboutImg {
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .MenuItemsCon {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  
+  .TestimCon {
+     flex-direction: column;
+     align-items: center;
+     gap: 40px;
+     padding: 0 20px;
+  }
+  
+  .contactCon {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  Form {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  
+  #upperFooter {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-bottom: 20px;
+    gap: 30px;
+  }
+  
+  .footerChild2, .footerChild3 {
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  .footerChild2 ul, .footerChild3 ul {
+     align-items: center;
+  }
+  
+  .footerText {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    max-width: 180px;
+  }
+  
+  .homeText h1 {
+    font-size: 32px;
+  }
+  
+  .homeText h1 span {
+    font-size: 32px;
+  }
+  
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  
+  .logo {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  
+  ul {
+    margin-right: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

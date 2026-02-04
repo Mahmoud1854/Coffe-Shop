@@ -42,7 +42,7 @@ export default function ContactMainContent(){
           </form>
                 </div>
             </div>
-            <br /><br /><br /><br /><br />
+            <br /><br /><br /><br />
         </section>
         
     )
