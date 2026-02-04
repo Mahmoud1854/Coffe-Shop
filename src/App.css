@@ -364,7 +364,7 @@ input::placeholder{
     padding-left: 20px;
   }
   
-  ul {
+  nav ul {
     margin-right: 0;
     gap: 0;
     position: fixed;
@@ -380,7 +380,7 @@ input::placeholder{
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
-  ul.active {
+  nav ul.active {
     top: 70px; /* Adjust based on header height */
   }
 
@@ -516,7 +516,7 @@ input::placeholder{
     margin-top: 10px;
   }
   
-  ul {
+  nav ul {
     margin-right: 0;
     flex-wrap: wrap;
     justify-content: center;
